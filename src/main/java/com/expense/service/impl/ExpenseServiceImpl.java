@@ -32,7 +32,7 @@ public class ExpenseServiceImpl implements ExpenseService {
 		//expense.setAmount(2000.00);
 		//return expense;
 		
-		Correct Code
+		//Correct Code
 		return expenseRepository.save(expense);
 	}
 
@@ -54,11 +54,11 @@ public class ExpenseServiceImpl implements ExpenseService {
 	@Override
 	public void deleteById(Long expenseId) {
 		//Buggy Code(ExpenseControllerTest.testDeleteExpense())
-		log.info("Debug delete");
+		//log.info("Debug delete");
 		
 		//Correct Code
-		//expenseRepository.deleteById(expenseId);
-		//expenseRepository.flush();
+		expenseRepository.deleteById(expenseId);
+		expenseRepository.flush();
 	}
 
 }
